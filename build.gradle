@@ -39,6 +39,8 @@ android {
         applicationId "tw.org.cic.morsenser_example_api"
         minSdkVersion 18
         targetSdkVersion 23
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
     }
     sourceSets {
         main {

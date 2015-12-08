@@ -5,7 +5,9 @@ import android.app.AlertDialog;
 import android.bluetooth.BluetoothDevice;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
@@ -617,6 +619,13 @@ public class MainActivityAPI extends AppCompatActivity  {
          */
         Bitmap bmp2 = Bitmap.createBitmap(bmp1, 0, height,bmp1.getWidth(), bmp1.getHeight() - height);
         blur(bmp2, view);
+    }
+
+    private void blurTest(){
+        View view =this.getWindow().getDecorView().findViewById(R.id.background);
+        Resources res=getResources();
+        Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.back);
+        blur(bmp,view);
     }
 
      private Bitmap save(View v)
